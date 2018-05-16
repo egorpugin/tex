@@ -1,0 +1,137 @@
+\documentclass{article}
+
+% пакеты для языка, формул
+\usepackage{amsmath, amsthm, amssymb} % formulas
+\usepackage{unicode-math}
+\usepackage{tinos}
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+\usepackage{polyglossia} % for russian hyphenation
+\setmainlanguage{russian}
+\setotherlanguage{english}
+\newfontfamily{\cyrillicfonttt}{Liberation Mono}
+
+% пакеты для таблиц
+
+% ссылки
+\usepackage{hyperref}
+
+% настройки документа
+\title{Latex - примеры таблиц}
+\author{Пугин Е.В.}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\url{https://en.wikibooks.org/wiki/LaTeX/Tables}
+
+\bigskip
+
+\section{Простые табличные данные (не таблица!) без переносов между листами}
+
+
+
+\bigskip
+
+\begin{tabular}{ l  c  r }
+Число & 123 & 123 \\
+  1 & 2 & 3 \\
+\end{tabular}
+\bigskip
+
+\begin{tabular}{ l  c  r }
+ \hline		
+Число & 123 & 123 \\
+ \hline		
+  1 & 2 & 3 \\
+ \hline		
+\end{tabular}
+\bigskip
+
+\begin{tabular}{ | l | c | r |}
+ \hline		
+Число & 123 & 123 \\ \hline		
+  1 & 2 & 3 \\ \hline		
+  4 & 5 & 6 \\ \hline		
+  7 & 8 & 9 \\ \hline
+  1 & 2 & 3 \\ \hline
+  4 & 5 & 6 \\ \hline
+\end{tabular}
+\bigskip
+
+% форматирование по левому краю (l) | центру (c) | правому краю (r)
+\begin{tabular}{ l | c | r }
+ \hline		
+Число & 123 & 123 \\
+ \hline		
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+ \hline		
+\end{tabular}
+\bigskip
+
+
+
+
+\newpage
+
+\section{Простая таблица (в окружении table) без переносов между листами}
+
+Использование [h] нежелательно, но допустимо.
+
+\begin{table}[h]
+\caption{123}
+\begin{tabular}{ l  c  r }
+Число & 123 & 123 \\
+  1 & 2 & 3 \\
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{123}
+\begin{tabular}{ l  c  r }
+ \hline		
+Число & 123 & 123 \\
+ \hline		
+  1 & 2 & 3 \\
+ \hline		
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{ | l | c | r |}
+ \hline		
+Число & 123 & 123 \\ \hline		
+  1 & 2 & 3 \\ \hline		
+  4 & 5 & 6 \\ \hline		
+  7 & 8 & 9 \\ \hline
+  1 & 2 & 3 \\ \hline
+  4 & 5 & 6 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{по центру}
+\centering
+\begin{tabular}{ l | c | r }
+ \hline		
+Число & 123 & 123 \\
+ \hline		
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+  7 & 8 & 9 \\
+  1 & 2 & 3 \\
+  4 & 5 & 6 \\
+ \hline		
+\end{tabular}
+\end{table}
+
+\end{document}
