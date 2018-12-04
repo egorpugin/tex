@@ -11,6 +11,7 @@ https://github.com/egorpugin/tex/
 http://ru.wikipedia.org/wiki/TeX (ru)
 http://en.wikipedia.org/wiki/TeX (en)
 http://www.latex-project.org/ (en)
+https://en.wikibooks.org/wiki/LaTeX/ (en)
 
 LaTeX2e reference manual (latest):
 http://mirror.macomnet.net/pub/CTAN/info/latex2e-help-texinfo/latex2e.html (en)
