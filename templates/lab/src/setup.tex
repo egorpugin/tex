@@ -30,17 +30,66 @@
 \setenumerate[2]{label=\arabic*), fullwidth, itemindent=\parindent, listparindent=\parindent, leftmargin=\parindent}
 \setitemize{fullwidth, itemindent=\parindent, listparindent=\parindent}
 
-\lstdefinestyle{customc}{
+\lstloadlanguages{C,C++,csh,Java}
+
+\usepackage{color}
+\definecolor{green}{rgb}{0.03,0.258,0}
+
+\lstdefinestyle{cpp}{
   belowcaptionskip=1\baselineskip,
   breaklines=true,
   frame=L,
   numbers=left,
   xleftmargin=\parindent,
-  language=C,
+  language=C++,
   showstringspaces=false,
-  basicstyle=\footnotesize\normalfont,
+  basicstyle=\scriptsize,
   keywordstyle=\bfseries\color{green!40!black},
   commentstyle=\itshape\color{purple!40!black},
   identifierstyle=\color{blue},
   stringstyle=\color{orange},
+}
+
+\lstdefinestyle{csharp}{
+	language=csh,
+	basicstyle=\scriptsize,
+	numbers=left,
+	numberstyle=\tiny,
+	tabsize=2,
+	extendedchars=true,
+	breaklines=true,
+	frame=L,
+	showspaces=false,
+	showtabs=false,
+	xleftmargin=\parindent,
+	commentstyle=\color{green},
+	morecomment=[l]{//}, %use comment-line-style!
+	morecomment=[s]{/*}{*/}, %for multiline comments
+	showstringspaces=false,
+	morekeywords={ 	abstract, event, new, struct,
+					as, explicit, null, switch,
+					base, extern, object, this,
+					bool, false, operator, throw,
+					break, finally, out, true,
+					byte, fixed, override, try,
+					case, float, params, typeof,
+					catch, for, private, uint,
+					char, foreach, protected, ulong,
+					checked, goto, public, unchecked,
+					class, if, readonly, unsafe,
+					const, implicit, ref, ushort,
+					continue, in, return, using,
+					decimal, int, sbyte, virtual,
+					default, interface, sealed, volatile,
+					delegate, internal, short, void,
+					do, is, sizeof, while,
+					double, lock, stackalloc,
+					else, long, static,
+					enum, namespace, string, get
+				},
+	keywordstyle=\color{blue},
+	identifierstyle=\color{black},
+	backgroundcolor=\color{white},
+	texcl=true,
+	moredelim=*[s]''
 }

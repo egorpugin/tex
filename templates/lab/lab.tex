@@ -3,16 +3,24 @@
 \input{src/packages.tex}
 
 % setup
-\newcommand{\FrontPageDepartment}{ИТ} %Факультет
-\newcommand{\FrontPageSubdepartment}{ИС} %Кафедра
-\newcommand{\WorkType}{Лабораторная работа №1} %Тип работы (заголовок)
-\newcommand{\Subject}{Предмет} %по ... родительный падеж
-\newcommand{\Topic}{Тема 123} %Тема
-\newcommand{\Professor}{Иванов~И.~И.} %Руководитель
-\newcommand{\Student}{Петров~П.~П.} %Студент
-\newcommand{\Group}{ИСм-112} %Группа
-\ESKDsignature{МИВУ 230400.68 ПЗ} % Код специальности и тип работы
-\newcommand{\FrontPageDate}{\ddmmyyyydate\today} %Дата
+%======================================================================
+\newcommand{\WorkNumber}{1} %Номер работы
+\newcommand{\Topic}{Тема}   %Тема
+%======================================================================
+\newcommand{\FrontPageDepartment}{ИТ}         %Факультет
+\newcommand{\FrontPageSubdepartment}{ПИ}      %Кафедра
+\newcommand{\Subject}{Операционным системам}  %по ... родительный падеж
+\newcommand{\Professor}{Пугин~Е.~В.}          %Руководитель
+\newcommand{\Student}{Сизов~К.~В.}            %Студент
+\newcommand{\Group}{ПИн-117}                  %Группа
+\newcommand{\Variant}{12}                     %Вариант по журналу
+\newcommand{\SpecialtyCode}{09.03.04}         %Код специальности
+%======================================================================
+\newcommand\leadingZero[1]{\ifnum #1 < 10 0\fi #1}
+\newcommand{\WorkType}{Лабораторная работа №\WorkNumber}
+\ESKDsignature{МИВУ.\SpecialtyCode-\leadingZero{\Variant}.0\leadingZero{\WorkNumber} ПЗ}
+\newcommand{\FrontPageDate}{\ddmmyyyydate\today}
+%======================================================================
 
 \input{src/setup.tex}
 
